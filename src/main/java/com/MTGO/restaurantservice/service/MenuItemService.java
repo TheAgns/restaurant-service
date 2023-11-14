@@ -28,7 +28,7 @@ public class MenuItemService {
 
     }
 
-    public List<MenuItemResponse> getAllMenuItems() {
+    public List<MenuItemResponse> getAllProducts() {
         List<MenuItem> menuItems = menuItemRepository.findAll();
 
         return menuItems.stream().map(this::mapToMenuItemResponse).collect(Collectors.toList());
