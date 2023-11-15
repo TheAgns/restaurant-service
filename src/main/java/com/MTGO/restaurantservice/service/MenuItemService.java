@@ -3,11 +3,19 @@ package com.MTGO.restaurantservice.service;
 import com.MTGO.restaurantservice.dto.MenuItemRequest;
 import com.MTGO.restaurantservice.dto.MenuItemResponse;
 import com.MTGO.restaurantservice.model.MenuItem;
+import com.MTGO.restaurantservice.model.Restaurant;
 import com.MTGO.restaurantservice.respoitory.MenuItemRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +24,9 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor //laver vores menuitemrespoity construtor når man compiler
 @Slf4j // vores logging
 public class MenuItemService {
+
     private final MenuItemRepository menuItemRepository;
+
     public void createMenuItem(MenuItemRequest menuItemRequest){
         MenuItem menuItem = MenuItem.builder()
                 .name(menuItemRequest.getName())
