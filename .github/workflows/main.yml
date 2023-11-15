@@ -44,7 +44,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v1
         with:
-          images: your-image-name
+          images: springdockercompose
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
