@@ -28,10 +28,10 @@ public class MenuItemService {
 
     }
 
-    public List<MenuItemResponse> getAllProducts() {
+    public List<MenuItemResponse> getAllMenuItems() {
         List<MenuItem> menuItems = menuItemRepository.findAll();
 
-        return menuItems.stream().map(this::mapToMenuItemResponse).collect(Collectors.toList());
+        return menuItems.stream().map(this::mapToMenuItemResponse).toList();
 
     }
 
