@@ -1,6 +1,7 @@
 package com.MTGO.restaurantservice.dto;
 
 
+import com.MTGO.restaurantservice.model.Restaurant;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,4 +18,6 @@ public class MenuItemResponse {
     private String name;
     private String description;
     private BigDecimal price;
+
+   private Restaurant restaurant;
 }
