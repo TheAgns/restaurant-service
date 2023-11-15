@@ -5,6 +5,7 @@ import com.MTGO.restaurantservice.dto.MenuItemResponse;
 import com.MTGO.restaurantservice.model.MenuItem;
 import com.MTGO.restaurantservice.model.Restaurant;
 import com.MTGO.restaurantservice.respoitory.MenuItemRepository;
+import com.MTGO.restaurantservice.respoitory.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
@@ -26,15 +27,18 @@ import java.util.stream.Collectors;
 public class MenuItemService {
 
     private final MenuItemRepository menuItemRepository;
+    private final RestaurantRepository restaurantRepository;
 
-    public void createMenuItem(MenuItemRequest menuItemRequest){
+    public void createMenuItem(MenuItemRequest menuItemRequest, String restaurantId){
+        Restaurant restaurant = restaurantRepository.findById(restaurantId).orElseThrow(() -> new RuntimeException("Restaurant not found"));
         MenuItem menuItem = MenuItem.builder()
                 .name(menuItemRequest.getName())
                 .description(menuItemRequest.getDescription())
                 .price(menuItemRequest.getPrice())
+                .restaurant(restaurant)
                 .build();
         menuItemRepository.save(menuItem);
-        log.info("Menu item {} is saved", menuItem.getId());
+        log.info("Menu item {} is saved", menuItem.getId(), restaurantId);
 
     }
 

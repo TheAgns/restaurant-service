@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.stereotype.Component;
@@ -22,12 +23,12 @@ import java.math.BigDecimal;
 
 public class MenuItem {
 
-//    @Transient
-//    public static final String SEQUENCE_NAME = "menuitem_sequence";
-
     @Id
     private String id;
     private String name;
     private String description;
     private BigDecimal price;
+
+    @DBRef
+    private Restaurant restaurant;
 }

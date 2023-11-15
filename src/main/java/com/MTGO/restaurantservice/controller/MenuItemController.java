@@ -17,8 +17,8 @@ public class MenuItemController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createProduct(@RequestBody MenuItemRequest menuItemRequest){
-        menuItemService.createMenuItem(menuItemRequest);
+    public void createProduct(@RequestBody MenuItemRequest menuItemRequest, @RequestParam String restaurantId){
+        menuItemService.createMenuItem(menuItemRequest, restaurantId);
     }
 
     @GetMapping
