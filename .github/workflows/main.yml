@@ -46,6 +46,9 @@ jobs:
         with:
           images: springdockercompose
 
+      - name: Debug print working directory contents
+        run: ls -R
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
