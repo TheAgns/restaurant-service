@@ -1,0 +1,13 @@
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/dto/RestaurantRequest.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/model/Restaurant.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/controller/MenuItemController.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/respoitory/RestaurantRepository.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/dto/MenuItemResponse.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/service/RestaurantService.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/RestaurantServiceApplication.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/model/MenuItem.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/dto/RestaurantResponse.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/controller/RestaurantController.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/service/MenuItemService.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/respoitory/MenuItemRepository.java
+/Users/markusagnsgaard/restaurant-service/src/main/java/com/MTGO/restaurantservice/dto/MenuItemRequest.java
