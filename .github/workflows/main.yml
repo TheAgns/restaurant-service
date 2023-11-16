@@ -44,7 +44,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v1
         with:
-          images: springdockercompose
+          images: theagns/springdockercompose
 
       - name: Debug print working directory contents
         run: ls -R
@@ -53,7 +53,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          dockerfile: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
