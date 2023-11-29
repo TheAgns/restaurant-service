@@ -30,6 +30,7 @@ public class MenuItemService {
     private final RestaurantRepository restaurantRepository;
 
     public void createMenuItem(MenuItemRequest menuItemRequest, String restaurantId){
+        log.info("Creating menu item for restaurant with ID: {}", restaurantId);
         Restaurant restaurant = restaurantRepository.findById(restaurantId).orElseThrow(() -> new RuntimeException("Restaurant not found"));
         MenuItem menuItem = MenuItem.builder()
                 .name(menuItemRequest.getName())
