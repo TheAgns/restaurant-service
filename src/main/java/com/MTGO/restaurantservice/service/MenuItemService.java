@@ -45,9 +45,7 @@ public class MenuItemService {
 
     public List<MenuItemResponse> getAllMenuItems() {
         List<MenuItem> menuItems = menuItemRepository.findAll();
-
         return menuItems.stream().map(this::mapToMenuItemResponse).toList();
-
     }
 
     private MenuItemResponse mapToMenuItemResponse(MenuItem menuItem){
