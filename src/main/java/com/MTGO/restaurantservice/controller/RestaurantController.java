@@ -16,7 +16,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RestaurantController {
 
-
     @PostMapping("/fromCsv")
     @ResponseStatus(HttpStatus.CREATED)
     public void populateDatabaseFromCsv() {
